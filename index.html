@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laginestra Reviews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;1,500&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F1F3EE;--ink:#12281F;--soft:#4B6155;--brass:#8A6516;--claret:#7B1E2E;--line:#C9D1C6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0E2219;--ink:#EFE8D4;--soft:#A9B8AB;--brass:#D4A94C;--claret:#E8A0AC;--line:#29443A;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0E2219;--ink:#EFE8D4;--soft:#A9B8AB;--brass:#D4A94C;--claret:#E8A0AC;--line:#29443A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:Newsreader,Georgia,"Times New Roman",serif;font-size:1.125rem;line-height:1.7}
+.wrap{max-width:62rem;margin:0 auto;padding:2rem 1.5rem 4rem}
+h1,h2,h3{font-family:"Bodoni Moda",Didot,Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15;margin:0}
+.mast{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-bottom:1.25rem;border-bottom:6px double var(--brass)}
+h1{font-style:italic;font-size:clamp(2.4rem,8vw,4.2rem);letter-spacing:-.01em}
+.sub{color:var(--soft);margin:.5rem 0 0;font-style:italic}
+.disc{flex:none;width:4.5rem;height:4.5rem;border-radius:50%;background:radial-gradient(circle,var(--claret) 0 22%,var(--paper) 22% 26%,transparent 26%),repeating-radial-gradient(circle,var(--brass) 0 1px,transparent 1px 5px);opacity:.9}
+@media (max-width:30rem){.disc{display:none}}
+nav.top{display:flex;gap:1.5rem;margin:1rem 0 2.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--line)}
+nav.top a{color:var(--ink);text-decoration:none;padding:.15rem 0;font-style:italic;border-bottom:2px solid transparent}
+nav.top a:hover{border-bottom-color:var(--line)}
+nav.top a[aria-current="page"]{border-bottom-color:var(--brass);font-weight:500}
+.btn{font:inherit;color:var(--ink);background:none;border:1.5px solid var(--brass);padding:.35rem .9rem;border-radius:.2rem;cursor:pointer}
+.btn:hover{background:var(--brass);color:var(--paper)}
+.cols{display:grid;gap:3rem}
+@media (min-width:56rem){.cols{grid-template-columns:minmax(0,1fr) 15rem}}
+a{color:var(--claret)}
+a:focus-visible,summary:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+.note{font-size:.95rem;color:var(--soft);font-style:italic;border-left:3px solid var(--brass);padding:.1rem .8rem;margin:0 0 1.75rem}
+.feedtitle{color:var(--soft);font-style:italic;margin:0 0 1.75rem}
+article{border-bottom:1px solid var(--line);padding-bottom:1.75rem;margin-bottom:2.25rem}
+article h2{font-size:1.9rem}
+.meta{margin:.4rem 0 1rem;color:var(--soft);font-size:.95rem;font-style:italic}
+.voto{background:var(--brass);color:var(--paper);padding:0 .5rem;border-radius:.15rem;font-style:normal;font-weight:500}
+article p{margin:.8rem 0;max-width:38rem}
+blockquote{margin:1.1rem 0;padding:.1rem 1.1rem;border-left:3px solid var(--brass);color:var(--soft);font-style:italic;max-width:38rem}
+details{margin-top:1rem}
+summary{cursor:pointer;color:var(--claret);font-style:italic}
+mjx-container{max-width:100%;overflow-x:auto;overflow-y:hidden}
+aside h3{font-size:1.1rem;font-style:italic;margin:0 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--brass)}
+aside section{margin-bottom:2rem}
+aside ul{list-style:none;margin:0;padding:0}
+aside li{padding:.1rem 0;font-size:1rem}
+.tags a{display:inline-block;margin:0 .6rem .2rem 0;font-size:1rem}
+.count{color:var(--soft)}
+.ed label{display:block;font-style:italic;margin:1.1rem 0 .3rem}
+.ed input,.ed select,.ed textarea{width:100%;max-width:38rem;font:inherit;color:var(--ink);background:var(--paper);border:1.5px solid var(--soft);border-radius:.2rem;padding:.45rem .6rem}
+.ed textarea{min-height:11rem;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95rem;line-height:1.5}
+.row{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.prev{border:1.5px dashed var(--soft);padding:.5rem 1.1rem;margin-top:.5rem;max-width:40rem}
+.hint{font-size:.95rem;color:var(--soft);max-width:38rem}
+footer{margin-top:2rem;color:var(--soft);font-size:.95rem;font-style:italic;border-top:6px double var(--brass);padding-top:1rem}
+[hidden]{display:none!important}
+</style>
+<script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true},svg:{fontCache:"global"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js" async></script>
+</head>
+<body>
+<div class="wrap">
+<header class="mast"><div><h1>Laginestra Reviews</h1><p class="sub">Film, dischi, tavoli e teoremi, recensiti con calma.</p></div><div class="disc" aria-hidden="true"></div></header>
+<nav class="top" aria-label="Pagine"><a href="#home" id="n-home">Home</a><a href="#scrivi" id="n-scrivi">Scrivi una voce</a></nav>
+<div class="cols">
+<main>
+<p class="note" id="nota">Le voci qui sotto sono esempi: sostituiscile con le tue.</p>
+<div id="feed"></div>
+<div id="ed" class="ed" hidden>
+<h2>Scrivi una voce</h2>
+<label for="e-t">Titolo</label><input id="e-t" type="text" value="Una disuguaglianza elegante">
+<label for="e-r">Rubrica</label><select id="e-r"></select>
+<label for="e-g">Tag (separati da virgola)</label><input id="e-g" type="text" value="disuguaglianze, analisi">
+<label for="e-v">Voto (facoltativo, per film, locali e dischi)</label><input id="e-v" type="text" placeholder="4/5">
+<label for="e-b">Testo, con formule in LaTeX</label>
+<textarea id="e-b" spellcheck="false">Per ogni $x>0$ vale la disuguaglianza tra media aritmetica e geometrica:
+
+$$\frac{x+1/x}{2}\ \ge\ 1.$$
+
+> Il quadrato di un numero reale non è mai negativo.
+
+[[soluzione]]
+Basta osservare che $\left(\sqrt{x}-\tfrac{1}{\sqrt{x}}\right)^2\ge 0$, cioè $x-2+\tfrac1x\ge 0$.</textarea>
+<p class="hint tex2jax_ignore">Formule nel testo: tra due dollari, per esempio $x^2$. Formule su riga propria: tra doppio dollaro. Una riga vuota separa i paragrafi, “&gt; ” apre una citazione, **grassetto** e *corsivo* funzionano, e [[soluzione]] su una riga nasconde ciò che segue in un riquadro a scomparsa.</p>
+<h3>Anteprima</h3>
+<div class="prev" id="e-p"></div>
+<div class="row"><button class="btn" id="e-s" type="button">Salva in questo browser</button><button class="btn" id="e-c" type="button">Mostra il codice per il sito</button></div>
+<p class="hint" id="e-m" role="status"></p>
+<textarea id="e-o" class="tex2jax_ignore" readonly hidden style="min-height:7rem"></textarea>
+</div>
+</main>
+<aside>
+<section><h3>Rubriche</h3><ul id="s-r"></ul></section>
+<section><h3>Archivio</h3><ul id="s-a"></ul></section>
+<section><h3>Tag</h3><div class="tags" id="s-t"></div></section>
+</aside>
+</div>
+<footer>Laginestra Reviews, dal 2026.</footer>
+</div>
+<script>
+var R=String.raw;
+var rub=[{id:"pensieri",n:"Pensieri"},{id:"film",n:"Film"},{id:"problemi",n:"Matematica e fisica"},{id:"viaggi",n:"Viaggi e locali"},{id:"musica",n:"Musica"}];
+var post=[
+{id:"p1",t:"Spiegare è un modo di capire",d:"2026-11-08",r:"pensieri",g:["scrittura"],b:`Ogni volta che cerco di spiegare un argomento in modo semplice mi accorgo di quali pezzi non avevo davvero capito. Il quaderno serve anche a questo: scrivere per mettere ordine.`},
+{id:"p2",t:"La somma dei primi n numeri dispari",d:"2026-11-05",r:"problemi",g:["induzione","biennio"],b:R`Dimostra che $1+3+5+\dots+(2n-1)=n^2$.
+
+[[soluzione]]
+Per induzione. Per $n=1$ vale $1=1^2$. Se è vero per $n$, allora
+$$1+3+\dots+(2n-1)+(2n+1)=n^2+2n+1=(n+1)^2,$$
+quindi è vero anche per $n+1$.`},
+{id:"p3",t:"Interstellar",d:"2026-11-02",r:"film",g:["fantascienza"],v:"4/5",b:`Una storia che usa la relatività come motore emotivo. La scena vicino al buco nero resta quella che rivedrei subito.`},
+{id:"p4",t:"Il periodo di un pendolo",d:"2026-10-28",r:"problemi",g:["meccanica","oscillazioni"],b:R`Un pendolo semplice di lunghezza $L$ oscilla con ampiezza piccola. Trova il periodo.
+
+[[soluzione]]
+Per angoli piccoli $\sin\theta\approx\theta$ e l’equazione del moto diventa $\ddot\theta=-\tfrac{g}{L}\,\theta$, un moto armonico con pulsazione $\omega=\sqrt{g/L}$. Quindi
+$$T=2\pi\sqrt{\frac{L}{g}}.$$`},
+{id:"p5",t:"Nome del posto visitato",d:"2026-10-20",r:"viaggi",g:["milano"],v:"4/5",b:`Cosa ho visto, cosa mi ha sorpreso, un consiglio pratico per chi ci va.`},
+{id:"p6",t:"Disco del momento",d:"2026-10-12",r:"musica",g:["ascolti"],b:`Come l’ho scoperto, perché lo ascolto in loop, il brano da cui partire.`}
+];
+var KEY="quaderno-bozze";
+function carica(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){return[]}}
+function salva(a){try{localStorage.setItem(KEY,JSON.stringify(a));return true}catch(e){return false}}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+var MATH=/\$\$[\s\S]+?\$\$|\$[^$\n]+?\$|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\]/g;
+function fmt(src){
+  var m=[];src=src.replace(MATH,function(x){m.push(esc(x));return "\u0000"+(m.length-1)+"\u0000"});
+  var parts=src.split(/\n\[\[soluzione\]\]\n?/);
+  function blk(t){return esc(t).split(/\n\s*\n/).map(function(p){p=p.trim();if(!p)return"";var q=/^&gt; /.test(p);if(q)p=p.replace(/^&gt; /,"");p=p.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*(.+?)\*/g,"<em>$1</em>").replace(/\n/g,"<br>");return q?"<blockquote>"+p+"</blockquote>":"<p>"+p+"</p>"}).join("")}
+  var h=blk(parts[0]);if(parts[1]!==undefined)h+="<details><summary>Mostra la soluzione</summary>"+blk(parts[1])+"</details>";
+  return h.replace(/\u0000(\d+)\u0000/g,function(_,i){return m[i]});
+}
+function tex(el){if(window.MathJax&&MathJax.typesetPromise)MathJax.typesetPromise([el])}
+function data(d){return new Date(d+"T12:00:00").toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric"})}
+function mese(k){var p=k.split("-");return new Date(+p[0],+p[1]-1,15).toLocaleDateString("it-IT",{month:"long",year:"numeric"})}
+function nomeR(id){return rub.filter(function(r){return r.id===id})[0].n}
+var $=function(i){return document.getElementById(i)};
+$("e-r").innerHTML=rub.map(function(r){return "<option value=\""+r.id+"\">"+r.n+"</option>"}).join("");
+function tutti(){return carica().concat(post).sort(function(a,b){return a.d<b.d?1:a.d>b.d?-1:0})}
+function lateral(a){
+  $("s-r").innerHTML=rub.map(function(r){var n=a.filter(function(p){return p.r===r.id}).length;return "<li><a href=\"#r-"+r.id+"\">"+r.n+"</a> <span class=\"count\">("+n+")</span></li>"}).join("");
+  var ms={};a.forEach(function(p){var k=p.d.slice(0,7);ms[k]=(ms[k]||0)+1});
+  $("s-a").innerHTML=Object.keys(ms).sort().reverse().map(function(k){return "<li><a href=\"#m-"+k+"\">"+mese(k)+"</a> <span class=\"count\">("+ms[k]+")</span></li>"}).join("");
+  var ts={};a.forEach(function(p){(p.g||[]).forEach(function(t){ts[t]=1})});
+  $("s-t").innerHTML=Object.keys(ts).sort().map(function(t){return "<a href=\"#t-"+t.replace(/[^a-z0-9]+/g,"-")+"\" data-t=\""+t+"\">"+esc(t)+"</a>"}).join("");
+}
+function slug(t){return t.toLowerCase().replace(/[^a-z0-9]+/g,"-")}
+function vista(){
+  var h=(location.hash||"#home").slice(1),a=tutti();lateral(a);
+  var scrivi=h==="scrivi";
+  $("ed").hidden=!scrivi;$("feed").hidden=scrivi;$("nota").hidden=scrivi;
+  $("n-home").toggleAttribute("aria-current",!scrivi);if(!scrivi)$("n-home").setAttribute("aria-current","page");else $("n-home").removeAttribute("aria-current");
+  if(scrivi)$("n-scrivi").setAttribute("aria-current","page");else $("n-scrivi").removeAttribute("aria-current");
+  if(scrivi){anteprima();return}
+  var tit="",f=a;
+  if(h.indexOf("r-")===0){var id=h.slice(2);if(rub.some(function(r){return r.id===id})){f=a.filter(function(p){return p.r===id});tit="Rubrica: "+nomeR(id)}}
+  else if(h.indexOf("t-")===0){var s=h.slice(2);f=a.filter(function(p){return(p.g||[]).some(function(t){return slug(t)===s})});tit="Tag: "+s.replace(/-/g," ")}
+  else if(h.indexOf("m-")===0){var k=h.slice(2);f=a.filter(function(p){return p.d.slice(0,7)===k});tit="Archivio: "+mese(k)}
+  var o=tit?"<p class=\"feedtitle\">"+esc(tit)+" &nbsp; <a href=\"#home\">Tutte le voci</a></p>":"";
+  if(!f.length)o+="<p>Nessuna voce qui, per ora.</p>";
+  f.forEach(function(p){
+    o+="<article><h2>"+esc(p.t)+"</h2><p class=\"meta\">"+data(p.d)+" in <a href=\"#r-"+p.r+"\">"+nomeR(p.r)+"</a>"+((p.g&&p.g.length)?" | Tag: "+p.g.map(function(t){return "<a href=\"#t-"+slug(t)+"\">"+esc(t)+"</a>"}).join(", "):"")+(p.v?" | <span class=\"voto\">Voto "+esc(p.v)+"</span>":"")+(p.local?" | Bozza visibile solo in questo browser":"")+"</p>"+fmt(p.b)+"</article>";
+  });
+  $("feed").innerHTML=o;tex($("feed"));
+}
+function voce(){var t=$("e-t").value.trim()||"Senza titolo",g=$("e-g").value.split(",").map(function(x){return x.trim().toLowerCase()}).filter(Boolean);
+  var o={id:"v"+Date.now(),t:t,d:new Date().toISOString().slice(0,10),r:$("e-r").value,g:g,b:$("e-b").value};var v=$("e-v").value.trim();if(v)o.v=v;return o}
+function anteprima(){$("e-p").innerHTML=fmt($("e-b").value);tex($("e-p"))}
+$("e-b").addEventListener("input",anteprima);
+$("e-s").addEventListener("click",function(){var a=carica(),o=voce();o.local=true;a.push(o);$("e-m").textContent=salva(a)?"Voce salvata in questo browser. La trovi nella Home.":"Questo browser non permette di salvare."});
+$("e-c").addEventListener("click",function(){var o=$("e-o");o.value=JSON.stringify(voce());o.hidden=false;o.select();$("e-m").textContent="Copia questo codice e mandamelo in chat: lo aggiungo al sito in modo che lo vedano tutti.";try{navigator.clipboard.writeText(o.value)}catch(e){}});
+window.addEventListener("hashchange",vista);
+vista();
+</script>
+</body>
+</html>
